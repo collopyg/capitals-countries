@@ -42,3 +42,53 @@ function validate(e) {
     document.getElementById("levelselect-heading").innerText = `Welcome to the game ${user}!`;
 
 }
+
+let questionArea = document.getElementById('question-area');
+let answerArea = document.getElementById('answers-list');
+let allQuestions;
+let current = 0;
+let score = 0;
+
+function questionChoice(levelChoice, curr) {
+
+    let userChoice = levelChoice.textContent;
+    if (userChoice === 'Easy') {
+        allQuestions = allQuestionsEasy;
+    } else if (userChoice === 'Medium') {
+        allQuestions = allQuestionsMedium;
+    } else if (userChoice === 'Hard') {
+        allQuestions = allQuestionsExpert;
+    }
+
+    // Start the quiz
+    loadQuestion(curr);
+
+    document.getElementById("total-questions").textContent = allQuestions.length;
+    document.getElementById("level").textContent = userChoice;
+    document.getElementById("game-area").style.display = "initial";
+    document.getElementById("levelchoice-area").style.display = "none";
+    localStorage.setItem("userLevel", userChoice);
+
+    return allQuestions;
+
+    function loadQuestion(curr) {
+
+        let question = allQuestions[curr].question;
+
+        questionArea.innerHTML = '';
+        questionArea.innerHTML = question;
+
+        let answers = allQuestions[curr].answers;
+
+        answerArea.innerHTML = '';
+
+        for (let i = 0; i < answers.length - 1; i += 1) {
+            let createList = document.createElement('li');
+            let text = document.createTextNode(answers[i]);
+
+            createList.appendChild(text);
+            createList.addEventListener("click", checkAnswer(i, answers));
+
+            answerArea.appendChild(createList);
+        }
+    }
