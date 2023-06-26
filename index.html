@@ -7,11 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Capitals Quiz</title>
 </head>
 
 <body>
+    <header>
+        <h1>Capital Cities Quiz</h1>
+        <h2>Do you know your Capital cities?</h2>
+    </header>
 
+    <!-- Input the username and game rules -->
+    <section id="username-area" class="name">
+        <h3>To begin the game please enter your username</h3>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <span role="alert" id="usernameError" aria-hidden="true"></span>
+            <button type="submit" id="submit" class="btn">Submit</button>
+        </form>
+        <h3>Game Rules:</h3>
+        <ul id="instructions">
+            <li>Enter your username and then 'Submit'.</li>
+            <li>Select of the three levels that you wish to play.</li>
+            <li>Answer the 10 questions by selecting the your answer.</li>
+        </ul>
+        <h3>Enjoy the Quiz and Good Luck!</h3>
+    </section>
 
 
 
