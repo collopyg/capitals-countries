@@ -87,44 +87,44 @@ const allQuestionsMedium = [
 
 const allQuestionsHard = [
     {
-        question: 'What is the capital of Switzerland?',
-        answers: ['Bern', 'Geneva', 'Zürich', 'Lausanne', 0]
+        question: 'Which two non-English clubs have played in the Premier League?',
+        answers: ['Swansea & Cardiff', 'Celtic & Rangers', 'Halifax & Wrexham', 'Liverpool & Everton', 0]
     },
     {
-        question: 'What is the capital of Argentina?',
-        answers: ['La Plata', 'Rosario', 'Buenos Aires', 'Quilmes', 2]
+        question: 'Who scored the first-ever Premier League goal?',
+        answers: ['Alan Shearer', 'Ian Rush', 'Brian Deane', 'Les Ferdinand', 2]
     },
     {
-        question: 'What is the capital of Bulgaria?',
-        answers: ['Plovdiv', 'Burgas', 'Sofia', 'Ruse', 2]
+        question: 'In what season did Arsenals Invincibles go the whole season unbeaten?',
+        answers: ['2001/02', '2002/03', '2003/04', '2004/05', 2]
     },
     {
-        question: 'What is the capital of Ecuador?',
-        answers: ['Guayaquil', 'Ambato', 'Portoviejo', 'Quito', 3]
+        question: 'Who scored the first Premier League hat-trick?',
+        answers: ['Stan Colymore', 'Robbie Keane', 'Kevin Philips', 'Eric Cantona', 3]
     },
     {
-        question: 'What is the capital of Georgia?',
-        answers: ['Tiblisi', 'Poti', 'Batumi', 'Gori', 0]
+        question: 'Who are the only team to have received a gold version of the Premier League trophy??',
+        answers: ['Arsenal', 'Liverpool', 'Leicster', 'Chelsea', 0]
     },
     {
-        question: 'What is the capital of Malaysia?',
-        answers: ['Kuching', 'Kuala Lumpur', 'Johor Bahru', 'Ipoh', 1]
+        question: 'Who has managed Reading, Swansea and Liverpool?',
+        answers: ['Roy Hodgson', 'Brendan Rodgers', 'Glen Hoddle', 'Gerry Francis', 1]
     },
     {
-        question: 'What is the capital of Morocco?',
-        answers: ['Rabat', 'Marrakesh', 'Casalanca', 'Tangier', 0]
+        question: 'Who was the first English manager to win the Premier League Manager of the Year award?',
+        answers: ['Harry Redknapp', 'Howard Wilkinson', 'Howard Kendall', 'Sam Allardyce', 0]
     },
     {
-        question: 'What is the capital of Jamaica?',
+        question: 'In what season did Roman Abramovich take over Chelsea?',
         answers: ['Montego Bay', 'Port Antonio', 'Santa Cruz', 'Kingston', 3]
     },
     {
-        question: 'What is the capital of North Macedonia?',
-        answers: ['Prilep', 'Veles', 'Skopje', 'Shtip', 2]
+        question: 'The winners of the UEFA Champions League and the UEFA Europe League compete for which sporting trophy?',
+        answers: ['FA Cup', 'World Clup Cup', 'UEFA Super Cup', 'FAI Cup', 2]
     },
     {
-        question: 'What is the capital of Guatemala?',
-        answers: ['Quetzaltenango', 'Escuintla', 'Guatemala City', 'Mixco', 2]
+        question: 'Which two teams share the Stadio Giuseppe Meazza?',
+        answers: ['Ajax & Rotterdam', 'Celtic & Rangers', 'AC & Inter Milan', 'Real Madrid & Barcelona', 2]
     }
 ];
 
