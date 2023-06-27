@@ -44,44 +44,44 @@ const allQuestionsEasy = [
 
 const allQuestionsMedium = [
     {
-        question: 'What is the captial of Canada?',
-        answers: ['Toronto', 'Vancouver', 'Ottowa', 'Quebec', 2],
+        question: 'For what club did Paulo Di Canio play when he pushed referee Paul Alcock?',
+        answers: ['West Ham', 'Everton', 'Sheffield Wednesday', 'Sheffield United', 2],
     },
     {
-        question: 'What is the capital of Hungary?',
-        answers: ['Debrecen', 'Pecs', 'Budapest', 'Szeged', 2]
+        question: 'Which manager was in charge at Manchester City when they won their first Premier League title?',
+        answers: ['Mark Hughes', 'Pep Guardiola', 'Roberto Mancini', 'Manuel Pellegrini', 2]
     },
     {
-        question: 'What is the capital of India?',
-        answers: ['New Delhi', 'Mumbai', 'Bangalore', 'Jaipur', 0]
+        question: 'Andriy Shevchenko is from which nation?',
+        answers: ['Ukraine', 'Hungary', 'Denmark', 'Russia', 0]
     },
     {
-        question: 'What is the capital of New Zealand?',
-        answers: ['Christchurch', 'Auckland', 'Wellington', 'Hobbiton', 2]
+        question: 'What Was Cristiano Ronaldos First Club?',
+        answers: ['Benfica', 'Porto', 'Sporting Lisbon', 'Man Utd', 2]
     },
     {
-        question: 'What is the capital of Peru?',
-        answers: ['Cusco', 'Iquitos', 'Huaraz', 'Lima', 3]
+        question: 'Who Is The All-Time Top Scorer In La Liga?',
+        answers: ['Luis Figo', 'Ronaldo', 'Owen', 'Messi', 3]
     },
     {
-        question: 'What is the capital of Sweden?',
-        answers: ['Stockholm', 'Gothenburg', 'Malmö', 'Umea', 0]
+        question: 'Who Won The World Cup In 1998?',
+        answers: ['France', 'Brazil', 'Germany', 'Italy', 0]
     },
     {
-        question: 'What is the capital of the Turkey?',
-        answers: ['Istanbul', 'Ankara', 'Antalya', 'Mersin', 1]
+        question: 'Which Country Has Won The World Cup The Most Times?',
+        answers: ['Germany', 'Brazil', 'Spain', 'Ireland', 1]
     },
     {
-        question: 'What is the capital of Ukraine?',
-        answers: ['Lviv', 'Odesa', 'Kyiv', 'Donetsk', 2]
+        question: 'What Is The German Soccer League Called?',
+        answers: ['The Blitzliga', 'The Volksliga', 'The Bundesliga', 'The Reichsliga', 2]
     },
     {
-        question: 'What is the capital of Afganistan?',
-        answers: ['Herat', 'Kabul', 'Jalalabad', 'Kandahar', 1]
+        question: 'What year did the Premier League start?',
+        answers: ['1991', '1992', '1993', '1994', 1]
     },
     {
-        question: 'What is the capital of Austria?',
-        answers: ['Salzburg', 'Graz', 'Vienna', 'Linz', 2]
+        question: 'Who is the Premier League’s all-time leading goal scorer?',
+        answers: ['Robbie Fowler', 'Andy Cole', 'Alan Shearer', 'Harry Kane', 2]
     }
 ];
 
