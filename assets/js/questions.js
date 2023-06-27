@@ -1,44 +1,44 @@
 // An array that holds all the questions and possible answers, including the corrent answer.
 const allQuestionsEasy = [
     {
-        question: 'What is the captial of France?',
-        answers: ['Strasbourg', 'Marseille', 'Paris', 'Montpellier', 2],
+        question: 'Which club has won the most Champions League titles?',
+        answers: ['AC Milan', 'Marseille', 'Real Madrid', 'Liverpool', 2],
     },
     {
-        question: 'What is the capital of Germany?',
-        answers: ['Berlin', 'Bonn', 'Baden-Baden', 'Munich', 0]
+        question: 'Who won the English Premier League in 2022/23?',
+        answers: ['Man City', 'Arsenal', 'Man Utd', 'Newcastle', 0]
     },
     {
-        question: 'What is the capital of Brazil?',
-        answers: ['Sao Paolo', 'Rio de Janeiro', 'Fortaleza', 'Brazilia', 3]
+        question: 'Which team palys at Stamford Bridge?',
+        answers: ['West Ham', 'Fulham', 'Crystal Palace', 'Chelsea', 3]
     },
     {
-        question: 'What is the capital of Norway?',
-        answers: ['Bergen', 'Stavanger', 'Trondheim', 'Oslo', 3]
+        question: 'Who was the top goal scorer in the English Premier League in 2022/23?',
+        answers: ['Mo Salah', 'Harry Kane', 'Ivan Toney', 'Erling Haaland', 3]
     },
     {
-        question: 'What is the capital of Italy?',
-        answers: ['Naples', 'Rome', 'Milan', 'Palermo', 1]
+        question: 'Who is the manager of Liverpool FC?',
+        answers: ['Mikel Arteta', 'Jürgen Klopp', 'Eddie Howe', 'Erik ten Hag', 1]
     },
     {
-        question: 'What is the capital of Japan?',
-        answers: ['Tokyo', 'Kyoto', 'Saporo', 'Osaka', 0]
+        question: 'Who owens Wrexham FC?',
+        answers: ['Ryan Reynolds & Rob McElhenney)', 'Brad Pitt', 'Tom Cruise', 'Tom Hanks', 0]
     },
     {
-        question: 'What is the capital of the United States of America?',
-        answers: ['New York', 'Los Angeles', 'Washington DC', 'Boston', 2]
+        question: 'Who plays at the Queen Elizabeth Stadium?',
+        answers: ['Norwich', 'Celtic', 'West Ham', 'Leeds', 2]
     },
     {
         question: 'What is the capital of Ireland?',
         answers: ['Cork', 'Galway', 'Waterford', 'Dublin', 3]
     },
     {
-        question: 'What is the capital of Russia?',
-        answers: ['Moskow', 'Saint Petersburg', 'Vladivostok', 'Kazan', 0]
+        question: 'How many clubs played in the first Premier League?',
+        answers: ['22', '20', '24', '18', 0]
     },
     {
-        question: 'What is the capital of Spain?',
-        answers: ['Bilbao', 'Madrid', 'Barcelona', 'Valencia', 1]
+        question: 'Who is the captain of Liverpool FC?',
+        answers: ['Mo Salah', 'Jordan Henderson', 'Virgil Van Djik', 'Nunez', 1]
     }
 ];
 
