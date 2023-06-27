@@ -1,11 +1,9 @@
-
-
 if (window.localStorage.getItem("username")) {
 
-    document.getElementById("levelselect-area").style.display = "initial";
+    document.getElementById("levelchoice-area").style.display = "initial";
     document.getElementById("username-area").style.display = "none";
     let user = window.localStorage.getItem("username");
-    document.getElementById("levelselect-heading").innerText = `Welcome to the game ${user}!`;
+    document.getElementById("levelchoice-heading").innerText = `Welcome to the game ${user}!`;
 
 } else if (!window.localStorage.getItem("username")) {
 
@@ -14,12 +12,6 @@ if (window.localStorage.getItem("username")) {
 
 }
 
-/**
- * This function validates that a username was input. It shows an error message if not.
- * If a username is provided it saves it so it can be displayed throughout the game.
- * Adapted from https://www.freecodecamp.org/news/form-validation-with-html5-and-javascript/
- * @param {event} e - event of a click
- */
 function validate(e) {
     e.preventDefault();
 
@@ -33,21 +25,24 @@ function validate(e) {
         usernameError.innerText = "Please enter a username to proceed!";
     } else if (usernameField.value) {
         window.localStorage.setItem("username", usernameField.value);
-        document.getElementById("levelselect-area").style.display = "initial";
+        document.getElementById("levelchoice-area").style.display = "initial";
         document.getElementById("username-area").style.display = "none";
         window.localStorage.setItem("username", usernameField.value);
     }
 
     let user = window.localStorage.getItem("username");
-    document.getElementById("levelselect-heading").innerText = `Welcome to the game ${user}!`;
+    document.getElementById("levelchoice-heading").innerText = `Welcome to the game ${user}!`;
 
 }
+
 
 let questionArea = document.getElementById('question-area');
 let answerArea = document.getElementById('answers-list');
 let allQuestions;
 let current = 0;
 let score = 0;
+
+/** This function grabs the users choice of questions level **/
 
 function questionChoice(levelChoice, curr) {
 
@@ -57,7 +52,7 @@ function questionChoice(levelChoice, curr) {
     } else if (userChoice === 'Medium') {
         allQuestions = allQuestionsMedium;
     } else if (userChoice === 'Hard') {
-        allQuestions = allQuestionsExpert;
+        allQuestions = allQuestionsAdvanced;
     }
 
     // Start the quiz
@@ -71,24 +66,104 @@ function questionChoice(levelChoice, curr) {
 
     return allQuestions;
 
-    function loadQuestion(curr) {
+}
 
-        let question = allQuestions[curr].question;
+/**
+ * This function loads the current question with answers into the game area
+ * Adapted from https://www.codehim.com/vanilla-javascript/javascript-multiple-choice-questions-code/
+ * @param {number} curr - number variable of the current question 
+ */
+function loadQuestion(curr) {
 
-        questionArea.innerHTML = '';
-        questionArea.innerHTML = question;
+    let question = allQuestions[curr].question;
 
-        let answers = allQuestions[curr].answers;
+    questionArea.innerHTML = '';
+    questionArea.innerHTML = question;
 
-        answerArea.innerHTML = '';
+    let answers = allQuestions[curr].answers;
 
-        for (let i = 0; i < answers.length - 1; i += 1) {
-            let createList = document.createElement('li');
-            let text = document.createTextNode(answers[i]);
+    answerArea.innerHTML = '';
 
-            createList.appendChild(text);
-            createList.addEventListener("click", checkAnswer(i, answers));
+    for (let i = 0; i < answers.length - 1; i += 1) {
+        let createList = document.createElement('li');
+        let text = document.createTextNode(answers[i]);
 
-            answerArea.appendChild(createList);
-        }
+        createList.appendChild(text);
+        createList.addEventListener("click", checkAnswer(i, answers));
+
+        answerArea.appendChild(createList);
     }
+}
+
+/**
+ * This function will run when an answer is clicked on. It checks if the clicked answer
+ * is the same as the correct answer. Then it checks if that was the last question
+ * in the question array. If it is not, then the next question will be loaded, 
+ * if it is the last question, then it will give feedback to say the game is over.
+ * Adapted from https://www.codehim.com/vanilla-javascript/javascript-multiple-choice-questions-code/
+ * @param {number} i - index of the answer clicked by the user
+ * @param {array} arr - array of possible answers for the current question
+ * @returns {function} 
+ */
+function checkAnswer(i, arr) {
+
+    return function () {
+        let givenAnswer = i;
+        let correctAnswer = arr[arr.length - 1];
+
+        if (givenAnswer === correctAnswer) {
+            incrementScore();
+        } else {
+            incrementWrongAnswer();
+        }
+
+        if (current < allQuestions.length - 1) {
+            current += 1;
+            document.getElementById("current-question").innerText = current + 1;
+            loadQuestion(current);
+        } else {
+            questionArea.innerHTML = 'Done! Final Score Page is loading ...';
+            answerArea.innerHTML = '';
+            score = document.getElementById("correct-counter").innerText;
+            localStorage.setItem("mostRecentScore", score);
+            load(gameOver);
+        }
+    };
+}
+
+/**
+ * This function increments the correct score.
+ * Adapted from Love Maths project
+ */
+function incrementScore() {
+
+    let oldscore = parseInt(document.getElementById("correct-counter").innerText);
+    document.getElementById("correct-counter").innerText = ++oldscore;
+
+}
+
+/**
+ * This function increments the wrong answer counter
+ * Adapted from Love Maths project
+ */
+function incrementWrongAnswer() {
+
+    let oldscore = parseInt(document.getElementById("wrong-counter").innerText);
+    document.getElementById("wrong-counter").innerText = ++oldscore;
+
+}
+
+/**
+ * This function delays the loading of myURL
+ * @param {string} myURL - URL is loaded with time delay 
+ */
+function load(myURL) {
+    setTimeout(myURL, 2000);
+}
+
+/**
+ * This function loads the last page when the game is over
+ */
+function gameOver() {
+    window.location.assign('end_game.html');
+}
